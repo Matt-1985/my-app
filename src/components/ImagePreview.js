@@ -1,5 +1,5 @@
 import React from "react";
-import "./imangePreview.css";
+import "./imagePreview.css";
 
 export default function ImangPreview({ src, alt, author }) {
   return (
