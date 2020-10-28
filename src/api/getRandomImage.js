@@ -3,9 +3,9 @@ export async function getRandomImage() {
   const response = await fetch(url, {
     method: "GET",
     headers: {
-      Authorization: `Client-ID ${process.env.REACT_APP_ACCESS_KEY}`,
+      Authorization: `Client-ID ${process.env.REACT_APP_ACCESS_KEY}`, // method, headers & Authorization sind API abhängig
     },
   });
-  const randomImage = response.json();
+  const randomImage = await response.json();
   return randomImage;
 }

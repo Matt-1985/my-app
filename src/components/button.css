@@ -1,0 +1,7 @@
+button {
+  transition: 0.3;
+}
+
+button {
+  transform: scale(1.2);
+}
