@@ -8,6 +8,18 @@ export default function ImangPreview({ src, alt, author, id }) {
       <IconButton
         className="icon-button"
         onClick={() => {
+          let favorites = null;
+          try {
+            favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+          } catch (error) {
+            console.error(error);
+            favorites = [];
+          }
+          if (favorites.includes(id)) {
+            // Already added to favorites
+            return;
+          }
+          const newFavorites = [...favorites, id];
           localStorage.setItem("favorites", JSON.stringify([id]));
         }}
       >
