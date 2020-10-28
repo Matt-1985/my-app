@@ -1,7 +1,12 @@
-button {
+.primaryButton {
   transition: 0.3;
+  border: none;
+  background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
+  border-radius: 25px;
+  box-shadow: 13px 5px 17px 0px rgba(50, 50, 50, 0.57);
 }
 
-button {
-  transform: scale(1.2);
+.primaryButton:hover {
+  transform: scale(1.1);
+  box-shadow: -13px -5px -17px 0px rgba(50, 50, 50, 0.57);
 }
