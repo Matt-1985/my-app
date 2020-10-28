@@ -19,6 +19,9 @@ function App() {
         className={"primaryButton"}
         onClick={() => handleClick()}
       />
+      <button className="favorite-btn" onClick={() => alert("test")}>
+        🤍
+      </button>
       {randomImage && (
         <ImagePreview
           src={randomImage.urls.regular}
