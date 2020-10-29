@@ -2,7 +2,7 @@ import React from "react";
 import IconButton from "./IconButton";
 import "./imagePreview.css";
 
-export default function ImangPreview({ src, alt, author, id }) {
+export default function ImagePreview({ src, alt, author, id }) {
   return (
     <div className="imageContainer">
       <IconButton
@@ -16,11 +16,10 @@ export default function ImangPreview({ src, alt, author, id }) {
             favorites = [];
           }
           if (favorites.includes(id)) {
-            // Already added to favorites
             return;
           }
           const newFavorites = [...favorites, id];
-          localStorage.setItem("favorites", JSON.stringify([id]));
+          localStorage.setItem("favorites", JSON.stringify(newFavorites));
         }}
       >
         🍑
